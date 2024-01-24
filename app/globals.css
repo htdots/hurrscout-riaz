@@ -1,0 +1,169 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Poppins', sans-serif !important; /* Add this line to set the font family globally */
+  }
+}
+
+.gradient-bg {
+  background: linear-gradient(15deg, #00b4db, #ff6cb6, #ffd166);
+}
+
+.text-gradient {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: white;
+}
+
+.whywork {
+  /* background-image: url("../public/To_learn_banner_grey.png"); */
+  background-size: cover;
+  background-position: center;
+  /* Add any other necessary styles */
+}
+
+/* Hover Collapse of Header */
+@media screen and (min-width: 1280px) and (max-width: 1441px) {
+  .hover-collapse {
+    right: 3.5% !important;
+  }
+}
+
+
+::-webkit-scrollbar {
+  width: 0.111rem;
+  height: 0rem;
+}
+
+::-webkit-scrollbar-track {
+  background: theme-color("site-secondary1");
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #CECECE;
+  border-radius: 1.25rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #A8A8A8;
+}
+
+.small-screen {
+  @media (min-width: 720px) {
+    display: none;
+  }
+}
+
+.big-screen {
+  @media (max-width: 720px) {
+    display: none;
+  }
+}
+
+
+/* SKEWED TEXT */
+.skewed-bg-text {
+  position: relative;
+  display: inline-block;
+  padding: 4px;
+  /* Adjust as needed */
+}
+
+.skewed-bg-text::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #FF7E4B;
+  transform: skewY(-3deg);
+  /* Adjust the skew angle as needed */
+  z-index: -1;
+  display: block;
+  word-spacing: -4px;
+}
+
+.head-text {
+  line-height: 40px;
+  word-spacing: -18px;
+  padding: 0 10px;
+}
+
+.underline-on-hover {
+  border-bottom: 1px solid #000000;  /* Adjust the thickness and color as needed */
+ 
+}

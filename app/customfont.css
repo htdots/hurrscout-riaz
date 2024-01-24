@@ -1,0 +1,10 @@
+/* custom-font.css */
+@font-face {
+    font-family: 'Integral CF';
+    src: url('https://fonts.googleapis.com/css2?family=Integral+CF:wght@400;700&display=swap');
+    /* font-weight:  !important; */
+}
+
+.font-custom {
+    font-family: 'Integral CF', sans-serif;
+}
